@@ -1,4 +1,5 @@
-*{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,64 +9,56 @@ body
     /* background-color: lightslategrey; */
     width: 100w;
     height: 100vh;
-    background:  linear-gradient(180deg, rgba(218, 59, 63, 0) 15.06%, #DA3B3F 20%), linear-gradient(179.29deg, #CF2425 11.93%, rgba(207, 36, 37, 0) 99.39%);
+    background: linear-gradient(180deg, rgba(218, 59, 63, 0) 15.06%, #DA3B3F 100%), linear-gradient(179.29deg, #CF2425 11.93%, rgba(207, 36, 37, 0) 99.39%);
+    mix-blend-mode: normal;
     display: flex;
     flex-direction: column;
-    margin-left: 75px;
-    margin-right: 10px;
+    padding-right: 75px;
+    padding-left: 75px;
 }
-    
-    
 header
 {
-    /* background-color: lawngreen; */
-    height: 80px;
+    height: 70px;
     width: 100%;
     display: flex;
     align-items: center;
-    
+    justify-content: flex-start;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    gap: 10px;
 }
 main
 {
     /* background-color: rgb(240, 182, 128); */
     flex-grow: 1;
     width: 100%;
-    background-image: url(../img/c640cafae879b28f2f3de80457a02fb4.png);
-    opacity: 80%;
-    background-size:70%;
-    background-position: center;
-    background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.conteiner-texto-main
-{
-    /* background-color: violet; */
-    
-
-}
-main p
+main h1
 {
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 36px;
-    max-width: 212px;
+    font-size: 2.3rem;
+    max-width: 700px;
+    position: absolute;
+    padding-right: 450px;
+    text-align: right;
 }
-
-.conteiner-imagem-coca
+.img-escrita-coca-fundo
 {
-    /* background-color:yellow ; */
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+    opacity: 40%;
 }
-
-.imgGarrafa
+.img-garrafa-principal
 {
-    /* background-color: turquoise; */
-
+    height: 60vh;
+    /* filter: drop-shadow(0px 200px 10px #aa2222) */
 }
-
 footer
 {
     /* background-color:lightgreen ; */
@@ -74,4 +67,69 @@ footer
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.conteiner-copyright
+{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 10px;
+}
+.conteiner-mapa-mundi
+{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+@media (max-width: 1326px)
+{
+    body
+    {
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+    header
+    {
+        font-size: 1.2rem;
+        height: 50px;
+    }
+    main
+    {
+        flex-direction: column;
+    }
+    main h1
+    {
+        font-size: 1rem;
+        max-width: 100px;
+        text-align: center;
+        padding-right:0px;
+        position: unset;
+    }
+    .img-garrafa-principal
+    {
+        height: 70vh;
+        filter: drop-shadow(0px 150px 20px #aa2222)
+    }
+    footer
+    {
+        justify-content: right;
+    }
+    .conteiner-copyright
+    {
+        display: none;
+    }
+    .img-escrita-coca-fundo
+    {
+    width: 100%;
+    }
+
 }
